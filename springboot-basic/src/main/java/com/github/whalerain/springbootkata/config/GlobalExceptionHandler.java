@@ -5,10 +5,14 @@ import com.github.whalerain.springbootkata.pojo.responseVo.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.context.i18n.LocaleContext;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Objects;
 
 /**
  * 全局异常处理
@@ -35,10 +39,30 @@ public class GlobalExceptionHandler {
     public BaseResponse handleException(Exception e) {
         log.error("处理未知异常", e);
         BaseResponse response = new BaseResponse();
-        response.fail(SysErrorCode.INNER_ERROR);
         String message = messageSource.getMessage(
-                MSG_ERROR_CODE+SysErrorCode.INNER_ERROR.takeValue(), null, LocaleContextHolder.getLocale());
-        response.setMessage(message);
+                "exception.handler.msg.unknown", null, LocaleContextHolder.getLocale());
+        response.fail(message, SysErrorCode.INNER_ERROR);
+        return response;
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseBody
+    public BaseResponse handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        log.error("处理参数校验异常", e);
+        List<FieldError> errors = e.getBindingResult().getFieldErrors();
+        String[] infos = null;
+        if(null != errors && errors.size() > 0) {
+            FieldError error = errors.get(0);
+            infos = new String[]{
+                    error.getField(),
+                    Objects.requireNonNull(error.getRejectedValue()).toString(),
+                    error.getDefaultMessage()
+            };
+        }
+        BaseResponse response = new BaseResponse();
+        String message = messageSource.getMessage(
+                "exception.handler.msg.param.invalid", infos, LocaleContextHolder.getLocale());
+        response.fail(message, SysErrorCode.PARAM_INVALID);
         return response;
     }
 

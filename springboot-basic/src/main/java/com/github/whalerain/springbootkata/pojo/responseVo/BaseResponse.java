@@ -32,7 +32,7 @@ public class BaseResponse<T> {
         this.message = message;
     }
 
-    public void success(T data, String message) {
+    public void success(String message, T data) {
         success(message);
         this.data = data;
     }
@@ -41,14 +41,16 @@ public class BaseResponse<T> {
         this.status = ResponseStatus.FAILURE;
     }
 
-    public void fail(ErrorCode errorCode) {
+    public void fail(String message) {
         fail();
-        this.errorCode = errorCode.takeValue();
+        this.message = message;
     }
 
-    public void fail(ErrorCode errorCode, String message) {
-        fail(errorCode);
-        this.message = message;
+    public void fail(String message, ErrorCode errorCode) {
+        fail(message);
+        if(null != errorCode) {
+            this.errorCode = errorCode.takeValue();
+        }
     }
 
 }

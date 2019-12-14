@@ -9,7 +9,8 @@ import com.github.whalerain.springbootkata.support.ErrorCode;
  */
 public enum SysErrorCode implements ErrorCode {
 
-    INNER_ERROR(100001, "系统内部错误");
+    INNER_ERROR(100001, "系统内部错误"),
+    PARAM_INVALID(100002, "参数校验无效");
 
     private Integer enumValue;
 
