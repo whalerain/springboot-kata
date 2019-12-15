@@ -2,6 +2,8 @@ package com.github.whalerain.springbootkata.pojo.modelVo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.whalerain.springbootkata.model.User;
+import com.github.whalerain.springbootkata.validator.GUpd;
+import com.github.whalerain.springbootkata.validator.Mobile;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.*;
@@ -14,7 +16,7 @@ import javax.validation.constraints.*;
  */
 public class UserVO extends User {
 
-
+    @NotNull(groups = {GUpd.class})
     @Override
     public Integer getId() {
         return super.getId();
@@ -49,6 +51,7 @@ public class UserVO extends User {
         return super.getAge();
     }
 
+    @Mobile
     @Override
     public String getMobile() {
         return super.getMobile();
