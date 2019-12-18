@@ -33,25 +33,25 @@ public class User extends BaseModel {
      */
     private String password;
 
-    /**
-     * 真实姓名
-     */
-    private String realName;
-
-    /**
-     * 用户年龄
-     */
-    private Integer age;
-
-    /**
-     * 绑定手机号
-     */
-    private String mobile;
-
-    /**
-     * 绑定邮箱
-     */
-    private String email;
+//    /**
+//     * 真实姓名
+//     */
+//    private String realName;
+//
+//    /**
+//     * 用户年龄
+//     */
+//    private Integer age;
+//
+//    /**
+//     * 绑定手机号
+//     */
+//    private String mobile;
+//
+//    /**
+//     * 绑定邮箱
+//     */
+//    private String email;
 
     /**
      * 账号状态

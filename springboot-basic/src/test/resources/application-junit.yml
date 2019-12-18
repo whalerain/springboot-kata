@@ -4,13 +4,12 @@ spring:
     driver-class-name: org.h2.Driver
     username: dev
     password: dev123
-  # h2 配置
-  h2:
-    console:
-      enabled: true
-      settings:
-        trace: true
-  # flyway 配置
+    schema: classpath:db/h2/schema.sql
+    data: classpath:db/h2/data.sql
+  messages:
+    basename: i18n/messages/messages
+    encoding: UTF-8
+    # flyway 配置
   flyway:
     # 启用或禁用 flyway
     enabled: true
@@ -35,12 +34,6 @@ spring:
     schemas: spring-boot-kata
     # 执行迁移时是否自动调用验证   当你的 版本不符合逻辑 比如 你先执行了 DML 而没有 对应的DDL 会抛出异常
     validate-on-migrate: true
-
-# 日志配置
-logging:
-  level:
-    org:
-      flywaydb: debug
 
 # MyBatis-plus配置
 mybatis-plus:

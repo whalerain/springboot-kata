@@ -7,6 +7,7 @@ import com.github.whalerain.springbootkata.validator.Mobile;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.*;
+import java.io.Serializable;
 
 /**
  * 用户VO超类
@@ -14,7 +15,7 @@ import javax.validation.constraints.*;
  *
  * @author ZhangXi
  */
-public class UserVO extends User {
+public class UserVO extends User implements Serializable {
 
     @NotNull(groups = {GUpd.class})
     @Override
@@ -40,28 +41,28 @@ public class UserVO extends User {
         return super.getPassword();
     }
 
-    @Override
-    public String getRealName() {
-        return super.getRealName();
-    }
-
-    @Digits(integer = 3, fraction = 0)
-    @Override
-    public Integer getAge() {
-        return super.getAge();
-    }
-
-    @Mobile
-    @Override
-    public String getMobile() {
-        return super.getMobile();
-    }
-
-    @Email
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
+//    @Override
+//    public String getRealName() {
+//        return super.getRealName();
+//    }
+//
+//    @Digits(integer = 3, fraction = 0)
+//    @Override
+//    public Integer getAge() {
+//        return super.getAge();
+//    }
+//
+//    @Mobile
+//    @Override
+//    public String getMobile() {
+//        return super.getMobile();
+//    }
+//
+//    @Email
+//    @Override
+//    public String getEmail() {
+//        return super.getEmail();
+//    }
 
     @Digits(integer = 1, fraction = 0)
     @Range(min = 0, max = 2)

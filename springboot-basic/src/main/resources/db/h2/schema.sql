@@ -1,4 +1,3 @@
-
 create table `user` (
     `id` int(11) unsigned not null auto_increment comment '用户ID',
     `login_name` varchar(225) not null comment '登录名称',
@@ -8,6 +7,3 @@ create table `user` (
     `is_deleted` tinyint(1) unsigned not null default 0 comment '是否已逻辑删除',
     primary key (`id`)
 ) engine = innodb default charset = utf8mb4;
-
-insert into user values (1, 'tester', 'h2test','{noop}12345', 0, 0);
-
