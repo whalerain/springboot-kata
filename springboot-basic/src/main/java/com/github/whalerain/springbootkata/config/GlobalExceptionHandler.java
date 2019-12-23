@@ -1,7 +1,7 @@
 package com.github.whalerain.springbootkata.config;
 
 import com.github.whalerain.springbootkata.constant.SysErrorCode;
-import com.github.whalerain.springbootkata.pojo.responseVo.BaseResponse;
+import com.github.whalerain.springbootkata.support.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

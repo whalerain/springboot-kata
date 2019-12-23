@@ -73,13 +73,14 @@ public class UserVO extends User implements Serializable {
 
     @JsonIgnore
     @Override
-    public Boolean getDeleted() {
-        return super.getDeleted();
+    public Boolean getIsDeleted() {
+        return super.getIsDeleted();
     }
 
     @JsonIgnore
     @Override
-    public void setDeleted(Boolean deleted) {
-        super.setDeleted(deleted);
+    public Integer getRowVersion() {
+        return super.getRowVersion();
     }
+
 }

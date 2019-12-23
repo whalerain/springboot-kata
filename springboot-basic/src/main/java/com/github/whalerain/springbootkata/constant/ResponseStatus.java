@@ -21,7 +21,7 @@ public enum ResponseStatus implements StringGetter {
     }
 
     @Override
-    public String takeValue() {
+    public String take() {
         return this.enumValue;
     }
 }

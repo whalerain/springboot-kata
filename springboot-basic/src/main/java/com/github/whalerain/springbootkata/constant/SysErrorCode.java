@@ -22,7 +22,7 @@ public enum SysErrorCode implements ErrorCode {
     }
 
     @Override
-    public Integer takeValue() {
+    public Integer take() {
         return this.enumValue;
     }
 

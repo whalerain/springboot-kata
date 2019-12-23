@@ -1,10 +1,12 @@
 package com.github.whalerain.springbootkata.support;
 
 /**
+ * 分页参数
+ *
  * @author ZhangXi
  */
-public interface Available<T> {
+public class PagedParams {
 
-    T take();
+
 
 }

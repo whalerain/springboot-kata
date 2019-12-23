@@ -1,10 +1,10 @@
 package com.github.whalerain.springbootkata.support;
 
 /**
+ * 查询参数
+ *
  * @author ZhangXi
  */
-public interface Available<T> {
-
-    T take();
+public class QueryParams {
 
 }

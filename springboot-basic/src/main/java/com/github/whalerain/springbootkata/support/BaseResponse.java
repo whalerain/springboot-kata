@@ -1,6 +1,5 @@
-package com.github.whalerain.springbootkata.pojo.responseVo;
+package com.github.whalerain.springbootkata.support;
 
-import com.github.whalerain.springbootkata.support.ErrorCode;
 import com.github.whalerain.springbootkata.constant.ResponseStatus;
 import lombok.Data;
 
@@ -49,7 +48,7 @@ public class BaseResponse<T> {
     public void fail(String message, ErrorCode errorCode) {
         fail(message);
         if(null != errorCode) {
-            this.errorCode = errorCode.takeValue();
+            this.errorCode = errorCode.take();
         }
     }
 

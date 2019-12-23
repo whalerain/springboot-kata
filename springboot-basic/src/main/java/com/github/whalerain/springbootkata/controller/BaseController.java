@@ -2,7 +2,7 @@ package com.github.whalerain.springbootkata.controller;
 
 import com.github.whalerain.springbootkata.config.PropKata;
 import com.github.whalerain.springbootkata.pojo.modelVo.UserVO;
-import com.github.whalerain.springbootkata.pojo.responseVo.BaseResponse;
+import com.github.whalerain.springbootkata.support.BaseResponse;
 import com.github.whalerain.springbootkata.validator.GUpd;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

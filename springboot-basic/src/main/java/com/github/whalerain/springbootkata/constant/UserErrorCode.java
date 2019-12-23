@@ -9,7 +9,7 @@ public enum UserErrorCode implements ErrorCode {
     ;
 
     @Override
-    public Integer takeValue() {
+    public Integer take() {
         return null;
     }
 }
