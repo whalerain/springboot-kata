@@ -2,6 +2,7 @@ package com.github.whalerain.springbootkata.dao;
 
 import com.github.whalerain.springbootkata.base.BaseTest;
 import com.github.whalerain.springbootkata.model.User;
+import com.github.whalerain.springbootkata.model.enums.UserStatus;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Resource;
@@ -26,7 +27,7 @@ class UserDaoTest extends BaseTest {
     void testUpdateById() {
         User user = userDao.selectById(1);
         assertEquals(user.getRowVersion(), 0, "user row version = 0");
-        user.setStatus(1);
+        user.setStatus(UserStatus.NORMAL);
         userDao.updateById(user);
         user = userDao.selectById(1);
         assertEquals(user.getRowVersion(), 1, "user row version = 1");

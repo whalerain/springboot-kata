@@ -1,5 +1,5 @@
-
-create table `user` (
+/* 创建用户表 */
+create table if not exists `user` (
     `id` int(11) unsigned not null auto_increment comment '用户ID',
     `login_name` varchar(225) not null comment '登录名称',
     `user_name` varchar(225) not null comment '用户名称',
@@ -10,5 +10,5 @@ create table `user` (
     primary key (`id`)
 ) engine = innodb default charset = utf8mb4;
 
-insert into user values (1, 'tester', 'h2test','{noop}12345', 0, 0, 0);
+
 

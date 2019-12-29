@@ -20,6 +20,9 @@ public class BaseModel {
     @TableLogic
     private Boolean isDeleted;
 
+    /**
+     * 乐观锁版本号
+     */
     @Version
     private Integer rowVersion;
 

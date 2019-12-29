@@ -5,6 +5,4 @@ package com.github.whalerain.springbootkata.support;
  *
  * @author ZhangXi
  */
-public class QueryParams {
-
-}
+public class QueryParams {}

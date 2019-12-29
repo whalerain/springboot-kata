@@ -1,14 +1,14 @@
 package com.github.whalerain.springbootkata.support;
 
 /**
- *
+ * 抽象实体数据请求VO
  *
  * @author ZhangXi
  */
-abstract class AbstractModelRequest<T> extends BaseRequest {
+public abstract class AbstractModelRequest<T> extends BaseRequest {
 
     /**
-     * 将请求参数校验
+     * 校验请求参数，并处理数据后，获取实体类
      *
      * @return T
      */
@@ -17,8 +17,8 @@ abstract class AbstractModelRequest<T> extends BaseRequest {
         return buildModel();
     }
 
-    abstract void checkAndHandleData();
+    protected abstract void checkAndHandleData();
 
-    abstract T buildModel();
+    protected abstract T buildModel();
 
 }

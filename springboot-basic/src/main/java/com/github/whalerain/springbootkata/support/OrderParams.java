@@ -12,7 +12,10 @@ import java.util.List;
 @Data
 public class OrderParams {
 
-    private List<ColumnItem> list;
+    /**
+     * 排序对
+     */
+    private List<ColumnItem> pairs;
 
 
 }
