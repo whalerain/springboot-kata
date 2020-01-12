@@ -3,8 +3,8 @@ package com.github.whalerain.springbootkata.pojo.modelVo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.whalerain.springbootkata.model.User;
-import com.github.whalerain.springbootkata.model.enums.Sex;
-import com.github.whalerain.springbootkata.model.enums.UserStatus;
+import com.github.whalerain.springbootkata.modelenum.Sex;
+import com.github.whalerain.springbootkata.modelenum.UserStatus;
 import com.github.whalerain.springbootkata.validator.GUpd;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.validator.constraints.Range;
@@ -19,42 +19,47 @@ import java.util.Date;
  *
  * @author ZhangXi
  */
-@Schema(name = "用户数据")
+@Schema(name = "User", description = "用户数据")
 public class UserVO extends User implements Serializable {
 
-    @Schema(description = "用户ID", example = "1")
     @NotNull(groups = {GUpd.class})
+    @Schema(description = "用户ID", example = "1", format = "null或者整数")
     @Override
     public Integer getId() {
         return super.getId();
     }
 
-    @Schema(description = "登录名称", example = "tester")
     @NotBlank
+    @Schema(description = "登录名称", example = "tester", format = "必须为8~20位字母，数字组合")
     @Override
     public String getLoginName() {
         return super.getLoginName();
     }
 
-    @Schema(description = "用户密码", example = "123456")
+    @Schema(description = "用户密码", example = "123456", format = "必须为8~20位字母，数字组合，字母包含大小写")
     @Override
     public String getPassword() {
         return super.getPassword();
     }
 
-    @Schema(description = "用户昵称", example = "flyway")
+    @Schema(description = "用户昵称", example = "flyway", format = "长度在6~30之间，且不能包含特殊字符")
     @Override
     public String getNickName() {
         return super.getNickName();
     }
 
+    @NotBlank
+    @Size(min = 2, max = 5)
     @Schema(description = "真实姓名", example = "王元", format = "必须2~5位中文")
     @Override
     public String getRealName() {
         return super.getRealName();
     }
 
-    @Schema(description = "")
+    @NotNull
+    @Digits(integer = 3, fraction = 0)
+    @Range(min = 1, max = 150)
+    @Schema(description = "用户年龄", example = "26", format = "必须为1~150整数")
     @Override
     public Integer getAge() {
         return super.getAge();
@@ -67,7 +72,7 @@ public class UserVO extends User implements Serializable {
     }
 
 
-    @Schema(description = "用户性别", example = "man", allowableValues = {"man", "woman"})
+    @Schema(description = "用户性别", example = "man", requiredProperties = {"man", "woman"})
     @Override
     public Sex getSex() {
         return super.getSex();

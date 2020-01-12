@@ -1,18 +1,18 @@
-package com.github.whalerain.springbootkata.model.enums;
+package com.github.whalerain.springbootkata.modelenum;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * 性别枚举类
+ *
  *
  * @author ZhangXi
  */
-public enum Sex {
-    MAN(1, "man", "男性"),
-    WOMAN(2, "woman", "女性");
+public enum UserStatus {
+    /**
+     * 正常状态
+     */
+    NORMAL(0, "normal", "正常");
 
     @EnumValue
     private Integer value;
@@ -22,7 +22,7 @@ public enum Sex {
 
     private String desc;
 
-    Sex(Integer value, String name, String desc) {
+    UserStatus(Integer value, String name, String desc) {
         this.value = value;
         this.name = name;
         this.desc = desc;
@@ -50,5 +50,14 @@ public enum Sex {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    /**
+     * API文档中显示@JsonValue标注的属性
+     * @return 用户状态名称
+     */
+    @Override
+    public String toString() {
+        return this.name;
     }
 }
