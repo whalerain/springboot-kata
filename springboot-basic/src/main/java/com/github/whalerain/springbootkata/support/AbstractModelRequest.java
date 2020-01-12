@@ -17,8 +17,15 @@ public abstract class AbstractModelRequest<T> extends BaseRequest {
         return buildModel();
     }
 
+    /**
+     * 检查并处理传入的表单数据
+     */
     protected abstract void checkAndHandleData();
 
+    /**
+     * 创建Model对象
+     * @return T
+     */
     protected abstract T buildModel();
 
 }

@@ -53,9 +53,10 @@ public class GlobalExceptionHandler {
         String[] infos = null;
         if(null != errors && errors.size() > 0) {
             FieldError error = errors.get(0);
+            Object rejectedValue = error.getRejectedValue();
             infos = new String[]{
                     error.getField(),
-                    Objects.requireNonNull(error.getRejectedValue()).toString(),
+                    rejectedValue == null ? null : rejectedValue.toString(),
                     error.getDefaultMessage()
             };
         }

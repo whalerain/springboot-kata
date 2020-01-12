@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
+ * 普通类获取spring bean对象
+ *
  * @author ZhangXi
  */
 @Slf4j
