@@ -15,7 +15,7 @@ public class OrderParams {
     /**
      * 排序对
      */
-    private List<ColumnItem> pairs;
+    private List<OrderItem> orderPairs;
 
 
 }

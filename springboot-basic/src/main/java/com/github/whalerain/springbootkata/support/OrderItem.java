@@ -1,5 +1,6 @@
 package com.github.whalerain.springbootkata.support;
 
+import com.github.whalerain.springbootkata.modelenum.SortOrder;
 import lombok.Data;
 
 /**
@@ -8,10 +9,10 @@ import lombok.Data;
  * @author ZhangXi
  */
 @Data
-public class ColumnItem {
+public class OrderItem {
 
     private String name;
 
-    private String sort;
+    private SortOrder order;
 
 }

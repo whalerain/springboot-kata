@@ -1,6 +1,7 @@
-package com.github.whalerain.springbootkata.service;
+package com.github.whalerain.springbootkata.service.impl;
 
 import com.github.whalerain.springbootkata.dao.UserDao;
+import com.github.whalerain.springbootkata.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
