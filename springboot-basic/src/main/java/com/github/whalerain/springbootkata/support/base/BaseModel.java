@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.base;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.Version;

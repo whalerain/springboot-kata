@@ -1,7 +1,7 @@
 package com.github.whalerain.springbootkata.config;
 
 import com.github.whalerain.springbootkata.constant.SysErrorCode;
-import com.github.whalerain.springbootkata.support.BaseResponse;
+import com.github.whalerain.springbootkata.support.base.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * 全局异常处理

@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.sub;
 
 import com.github.whalerain.springbootkata.modelenum.SortOrder;
 import lombok.Data;

@@ -2,7 +2,7 @@ package com.github.whalerain.springbootkata.model;
 
 import com.github.whalerain.springbootkata.modelenum.Sex;
 import com.github.whalerain.springbootkata.modelenum.UserStatus;
-import com.github.whalerain.springbootkata.support.BaseModel;
+import com.github.whalerain.springbootkata.support.base.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

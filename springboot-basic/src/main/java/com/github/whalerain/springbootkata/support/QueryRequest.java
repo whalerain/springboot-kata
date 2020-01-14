@@ -1,5 +1,9 @@
 package com.github.whalerain.springbootkata.support;
 
+import com.github.whalerain.springbootkata.support.base.BaseRequest;
+import com.github.whalerain.springbootkata.support.sub.OrderParams;
+import com.github.whalerain.springbootkata.support.sub.PagedParams;
+import com.github.whalerain.springbootkata.support.sub.QueryParams;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,5 +1,7 @@
 package com.github.whalerain.springbootkata.support;
 
+import com.github.whalerain.springbootkata.support.base.BaseRequest;
+
 /**
  * 抽象实体数据请求VO
  *

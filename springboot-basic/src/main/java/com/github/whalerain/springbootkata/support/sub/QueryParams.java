@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.sub;
 
 /**
  * 查询参数

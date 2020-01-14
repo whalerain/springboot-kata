@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.base;
 
 /**
  * @author ZhangXi
