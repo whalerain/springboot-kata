@@ -20,11 +20,8 @@ public class PropKata {
     @SuppressWarnings("WeakerAccess")
     @Data
     public static class Regexp {
-
         private String mobile;
-
         private String telephone;
-
     }
 
 }

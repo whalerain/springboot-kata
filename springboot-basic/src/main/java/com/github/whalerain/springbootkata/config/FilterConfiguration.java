@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * 过滤器配置
  *
  * @author ZhangXi
  */
