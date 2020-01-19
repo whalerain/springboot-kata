@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 监听器配置
+ *
  * @author ZhangXi
  */
 @Configuration

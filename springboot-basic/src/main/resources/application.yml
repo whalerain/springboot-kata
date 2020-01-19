@@ -3,9 +3,15 @@
 spring:
   profiles:
     active: dev
+  # 国际化消息
   messages:
     basename: i18n/messages/messages
     encoding: UTF-8
+  # 配置json日期格式与时区
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
 
 # 自定义系统配置
 kata:

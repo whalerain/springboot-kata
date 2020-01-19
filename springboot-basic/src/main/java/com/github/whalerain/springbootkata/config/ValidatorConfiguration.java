@@ -10,7 +10,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Spring参数校验配置
+ * 参数校验配置
  *
  * @author ZhangXi
  */
