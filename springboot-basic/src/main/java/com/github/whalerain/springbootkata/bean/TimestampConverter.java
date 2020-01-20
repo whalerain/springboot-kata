@@ -15,9 +15,8 @@ public class TimestampConverter implements Converter<String, Timestamp> {
 
     @Override
     public Timestamp convert(String stringTime) {
-        //todo 主要将字符串转为时间戳
-
-
-        return null;
+        //todo 检查字符串格式是否符合时间戳
+        long milliseconds = Long.parseLong(stringTime);
+        return new Timestamp(milliseconds);
     }
 }
