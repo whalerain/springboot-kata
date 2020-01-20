@@ -1,6 +1,6 @@
 package com.github.whalerain.springbootkata.controller;
 
-import com.github.whalerain.springbootkata.pojo.modelVo.JsonData;
+import com.github.whalerain.springbootkata.pojo.modelvo.JsonData;
 import com.github.whalerain.springbootkata.support.base.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

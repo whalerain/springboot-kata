@@ -1,6 +1,5 @@
-package com.github.whalerain.springbootkata.pojo.modelVo;
+package com.github.whalerain.springbootkata.pojo.modelvo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.sql.Timestamp;
