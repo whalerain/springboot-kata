@@ -59,8 +59,6 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
 
-
-
 # API docs
 springdoc:
   api-docs:
