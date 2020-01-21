@@ -12,7 +12,8 @@ public enum UserStatus {
     /**
      * 正常状态
      */
-    NORMAL(0, "normal", "正常");
+    NORMAL(0, "normal", "正常"),
+    DISABLED(1, "disabled", "禁用");
 
     @EnumValue
     private Integer value;
