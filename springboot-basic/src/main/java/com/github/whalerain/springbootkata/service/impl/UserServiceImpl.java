@@ -17,6 +17,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -51,11 +52,13 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public UserVO addUser(User user) {
         return null;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @CachePut(value = CacheConfiguration.USER_CACHE, key = "#user.id")
     @Override
     public UserVO updateUser(User user) {
@@ -66,12 +69,14 @@ public class UserServiceImpl implements UserService {
         return vo;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @CacheEvict(value = CacheConfiguration.USER_CACHE, key = "#id", beforeInvocation = true)
     @Override
     public void deleteUser(int id) {
         userDao.deleteById(id);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @CacheEvict(value = CacheConfiguration.USER_CACHE, key = "#id", beforeInvocation = true)
     @Override
     public void enableUser(int id) {
@@ -80,6 +85,7 @@ public class UserServiceImpl implements UserService {
         userDao.updateById(user);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @CacheEvict(value = CacheConfiguration.USER_CACHE, key = "#id", beforeInvocation = true)
     @Override
     public void disableUser(int id) {
