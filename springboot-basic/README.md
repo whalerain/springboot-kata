@@ -72,8 +72,43 @@
 
 ### 虚拟文件服务器
 
+```java
+@Profile(AppConst.PROFILE_DEV)
+@Configuration
+public class SimpleFileServerConfiguration implements WebMvcConfigurer {
+
+    /**
+     * springboot可以将本地文件地址映射为虚拟网络地址，从而实现简单的文件服务器
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("file:E:/develop/files/resources/");
+    }
+}
+```
+
 ### API文档
 
+配置：
+
+```java
+@OpenAPIDefinition(
+        info = @Info(
+                title = "spring kata API",
+                version = "v1.0.1",
+                description = "springboot最佳实践，项目类型：basic"
+        )
+)
+@Configuration
+public class ApiDocConfiguration {
+}
+```
+
+使用：
+
+```java
+
+```
 
 
 
