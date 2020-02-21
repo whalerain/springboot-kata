@@ -4,6 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 
+/**
+ * Spring Boot最佳实践
+ * @author ZhangXi
+ */
 @SpringBootApplication()
 public class SpringbootKataApplication {
 
