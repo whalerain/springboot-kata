@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.inject;
+package com.github.whalerain.springbootkata.junit5demo.inject;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestReporter;

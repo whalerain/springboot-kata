@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.tag;
+package com.github.whalerain.springbootkata.junit5demo.tag;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;

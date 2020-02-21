@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.parameterized;
+package com.github.whalerain.springbootkata.junit5demo.parameterized;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;

@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.conditional;
+package com.github.whalerain.springbootkata.junit5demo.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnJre;

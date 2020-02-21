@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.repeated;
+package com.github.whalerain.springbootkata.junit5demo.repeated;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

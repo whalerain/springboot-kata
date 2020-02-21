@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.order;
+package com.github.whalerain.springbootkata.junit5demo.order;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

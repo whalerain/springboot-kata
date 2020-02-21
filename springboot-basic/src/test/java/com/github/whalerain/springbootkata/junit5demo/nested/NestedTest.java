@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.nested;
+package com.github.whalerain.springbootkata.junit5demo.nested;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

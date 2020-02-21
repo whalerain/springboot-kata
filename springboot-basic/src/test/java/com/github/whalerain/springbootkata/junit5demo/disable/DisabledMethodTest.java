@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.demo.disable;
+package com.github.whalerain.springbootkata.junit5demo.disable;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
