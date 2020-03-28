@@ -11,6 +11,7 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -67,7 +68,7 @@ public class UserVO extends User implements Serializable {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Override
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return super.getBirthday();
     }
 

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.whalerain.springbootkata.config.CacheConfiguration;
 import com.github.whalerain.springbootkata.dao.UserDao;
+import com.github.whalerain.springbootkata.exception.InvalidPreconditionException;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.modelenum.UserStatus;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
@@ -55,6 +56,7 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public UserVO addUser(User user) {
+        this.needNotExisted(user.getId());
         return null;
     }
 
@@ -93,4 +95,31 @@ public class UserServiceImpl implements UserService {
         user.setStatus(UserStatus.DISABLED);
         userDao.updateById(user);
     }
+
+
+
+    private UserServiceImpl needExisted(int id) throws InvalidPreconditionException {
+        if (null == userDao.selectById(id)) {
+            throw new InvalidPreconditionException("测试前置条件与事务");
+        }
+        return this;
+    }
+
+    private UserServiceImpl needNotExisted(int id) {
+        if (null != userDao.getOneById(id)) {
+
+        }
+        return this;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

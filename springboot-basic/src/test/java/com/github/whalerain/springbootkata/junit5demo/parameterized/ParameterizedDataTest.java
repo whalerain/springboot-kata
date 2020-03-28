@@ -17,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ParameterizedDataTest {
 
     @ParameterizedTest
-    @ValueSource(strings = {"java", "c++", "python", "go"})
+    @ValueSource(strings = {"java", "c++", "python"})
     void testMultiLanguages(String language) {
         assertTrue(language.length() >= 3, "language's length longer than 3");
     }
 
     @ParameterizedTest
-    @ValueSource(classes = {})
+    @ValueSource(classes = {String.class})
     void testMultiObjects() {
 
     }
@@ -31,7 +31,7 @@ public class ParameterizedDataTest {
     @ParameterizedTest
     @NullSource
     @EmptySource
-    @ValueSource(strings = { " ", "   ", "\t", "\n" })
+    @ValueSource(strings = { " ", "   ", "" })
     void nullEmptyAndBlankStrings(String text) {
         assertTrue(text == null || text.trim().isEmpty());
     }

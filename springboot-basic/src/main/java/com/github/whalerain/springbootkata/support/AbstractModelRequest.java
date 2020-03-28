@@ -1,5 +1,6 @@
 package com.github.whalerain.springbootkata.support;
 
+import com.github.whalerain.springbootkata.exception.InvalidParamException;
 import com.github.whalerain.springbootkata.support.base.BaseRequest;
 
 /**
@@ -14,7 +15,8 @@ public abstract class AbstractModelRequest<T> extends BaseRequest {
      *
      * @return T
      */
-    public T obtainCheckedModel() {
+    public T obtainCheckedModel() throws InvalidParamException {
+        //日志记录等
         checkAndHandleData();
         return buildModel();
     }
@@ -22,7 +24,7 @@ public abstract class AbstractModelRequest<T> extends BaseRequest {
     /**
      * 检查并处理传入的表单数据
      */
-    protected abstract void checkAndHandleData();
+    protected abstract void checkAndHandleData() throws InvalidParamException;
 
     /**
      * 创建Model对象

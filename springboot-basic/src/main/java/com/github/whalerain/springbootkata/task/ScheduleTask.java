@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScheduleTask {
 
-    @Scheduled(fixedRate = 1000)
+    //@Scheduled(fixedRate = 1000)
     public void reportCurrentTime() {
         log.info("正在执行每秒一次任务...");
     }
 
-    @Scheduled(cron = "0/5 * * * * *")
+    // @Scheduled(cron = "0/5 * * * * *")
     public void reportTime() {
         log.info("正在执行第二种每5秒一次任务...");
     }

@@ -1,6 +1,7 @@
 package com.github.whalerain.springbootkata.controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.github.whalerain.springbootkata.exception.InvalidParamException;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
 import com.github.whalerain.springbootkata.support.AbstractModelRequest;
@@ -60,8 +61,8 @@ public class UserController extends BaseController {
         private UserAdd data;
 
         @Override
-        protected void checkAndHandleData() {
-
+        protected void checkAndHandleData() throws InvalidParamException {
+            //fixme 检查用户数据是否非法
         }
 
         @Override

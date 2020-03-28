@@ -3,10 +3,11 @@ package com.github.whalerain.springbootkata.model;
 import com.github.whalerain.springbootkata.modelenum.Sex;
 import com.github.whalerain.springbootkata.modelenum.UserStatus;
 import com.github.whalerain.springbootkata.support.base.BaseModel;
+import com.github.whalerain.springbootkata.validator.InEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * 用户实体类
@@ -50,11 +51,12 @@ public class User extends BaseModel {
     /**
      * 生日
      */
-    private Date birthday;
+    private LocalDate birthday;
 
     /**
      * 用户性别
      */
+    @InEnum(enumClass = Sex.class)
     private Sex sex;
 
     /**

@@ -17,7 +17,8 @@ public class IpInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return false;
+        //todo 这里需要在response中处理拦截请求后的相应信息
+        return true;
     }
 
     @Override

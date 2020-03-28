@@ -42,6 +42,7 @@ public class OperationLogAspect {
         Object target = joinPoint.getTarget();
 
 
+        log.info(target.toString());
 
 
     }

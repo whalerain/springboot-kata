@@ -17,13 +17,13 @@ class UserDaoTest extends BaseTest {
     @Resource
     private UserDao userDao;
 
-    @Test
+//    @Test
     void testSelectById() {
         User user = userDao.selectById(1);
         assertNotNull(user, "user not null");
     }
 
-    @Test
+//    @Test
     void testUpdateById() {
         User user = userDao.selectById(1);
         assertEquals(user.getRowVersion(), 0, "user row version = 0");
@@ -33,7 +33,7 @@ class UserDaoTest extends BaseTest {
         assertEquals(user.getRowVersion(), 1, "user row version = 1");
     }
 
-    @Test
+//    @Test
     void testDeleteById_logic() {
         userDao.deleteById(1);
         User user = userDao.getOneById(1);

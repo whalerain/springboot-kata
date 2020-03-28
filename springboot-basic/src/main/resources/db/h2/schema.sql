@@ -8,3 +8,5 @@ create table `user` (
     `row_version` int(11) unsigned not null default 0 comment '乐观锁数据行版本',
     primary key (`id`)
 ) engine = innodb default charset = utf8mb4;
+
+
