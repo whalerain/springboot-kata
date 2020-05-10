@@ -124,7 +124,7 @@ public class SimpleFileServerConfiguration implements WebMvcConfigurer {
 @Configuration
 public class ApiDocConfiguration {
 }
-```
+``` 
 
 使用：
 
@@ -132,6 +132,8 @@ public class ApiDocConfiguration {
 
 ```
 
+
+### Actuator
 
 
 
