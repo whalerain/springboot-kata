@@ -1,7 +1,6 @@
-package com.github.whalerain.springbootkata.modelenum;
+package com.github.whalerain.springbootkata.menum;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
-import lombok.Data;
 
 /**
  * 数据库查询排序顺序

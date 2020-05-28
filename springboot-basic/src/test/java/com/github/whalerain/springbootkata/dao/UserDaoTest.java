@@ -2,8 +2,7 @@ package com.github.whalerain.springbootkata.dao;
 
 import com.github.whalerain.springbootkata.base.BaseTest;
 import com.github.whalerain.springbootkata.model.User;
-import com.github.whalerain.springbootkata.modelenum.UserStatus;
-import org.junit.jupiter.api.Test;
+import com.github.whalerain.springbootkata.menum.UserStatus;
 
 import javax.annotation.Resource;
 

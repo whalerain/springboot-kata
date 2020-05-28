@@ -1,6 +1,6 @@
 package com.github.whalerain.springbootkata.support.sub;
 
-import com.github.whalerain.springbootkata.modelenum.SortOrder;
+import com.github.whalerain.springbootkata.menum.SortOrder;
 import lombok.Data;
 
 /**

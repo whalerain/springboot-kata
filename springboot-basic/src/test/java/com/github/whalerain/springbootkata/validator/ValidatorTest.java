@@ -1,8 +1,8 @@
 package com.github.whalerain.springbootkata.validator;
 
 import com.github.whalerain.springbootkata.model.User;
-import com.github.whalerain.springbootkata.modelenum.Sex;
-import com.github.whalerain.springbootkata.modelenum.UserStatus;
+import com.github.whalerain.springbootkata.menum.Sex;
+import com.github.whalerain.springbootkata.menum.UserStatus;
 import org.junit.jupiter.api.Test;
 
 import javax.validation.ConstraintViolation;

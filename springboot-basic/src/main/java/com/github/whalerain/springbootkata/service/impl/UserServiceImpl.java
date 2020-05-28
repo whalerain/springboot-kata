@@ -6,7 +6,7 @@ import com.github.whalerain.springbootkata.config.CacheConfiguration;
 import com.github.whalerain.springbootkata.dao.UserDao;
 import com.github.whalerain.springbootkata.exception.InvalidPreconditionException;
 import com.github.whalerain.springbootkata.model.User;
-import com.github.whalerain.springbootkata.modelenum.UserStatus;
+import com.github.whalerain.springbootkata.menum.UserStatus;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
 import com.github.whalerain.springbootkata.service.UserService;
 import com.github.whalerain.springbootkata.support.PagedData;

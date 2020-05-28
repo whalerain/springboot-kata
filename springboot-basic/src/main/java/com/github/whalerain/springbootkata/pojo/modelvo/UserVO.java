@@ -3,8 +3,8 @@ package com.github.whalerain.springbootkata.pojo.modelvo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.whalerain.springbootkata.model.User;
-import com.github.whalerain.springbootkata.modelenum.Sex;
-import com.github.whalerain.springbootkata.modelenum.UserStatus;
+import com.github.whalerain.springbootkata.menum.Sex;
+import com.github.whalerain.springbootkata.menum.UserStatus;
 import com.github.whalerain.springbootkata.validator.GUpd;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.validator.constraints.Range;
@@ -12,7 +12,6 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  * 用户VO超类
