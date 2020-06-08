@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
  * Spring Boot最佳实践
  * @author ZhangXi
  */
-@SpringBootApplication()
+@SpringBootApplication
 public class SpringbootKataApplication {
 
     public static void main(String[] args) {

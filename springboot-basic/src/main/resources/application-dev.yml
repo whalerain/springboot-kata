@@ -52,7 +52,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:com/github/whalerain/springbootkata/dao/mapper/**/*.xml
   type-aliases-package: com.github.whalerain.springbootkata.model
-  type-enums-package: com.github.whalerain.springbootkata.modelenum
+  type-enums-package: com.github.whalerain.springbootkata.menum
   global-config:
     db-config:
       # 配置逻辑删除

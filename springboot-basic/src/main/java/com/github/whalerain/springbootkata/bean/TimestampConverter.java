@@ -11,7 +11,7 @@ import java.sql.Timestamp;
  * @author ZhangXi
  */
 @Component
-public class TimestampConverter implements Converter<String, Timestamp> {
+public class  TimestampConverter implements Converter<String, Timestamp> {
 
     @Override
     public Timestamp convert(String stringTime) {

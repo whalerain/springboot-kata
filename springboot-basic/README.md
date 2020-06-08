@@ -4,17 +4,87 @@
 
 该项目就着重与基础与常用功能配置使用最佳实践，以帮助自己及其他开发者快速构建起基础服务。
 
-# 功能清单
+# 实践清单
 
-## web基础
+## Web MVC
 
-### MVC模式
+* `@SpringBootApplication` 注解
+
+```java
+@SpringBootApplication
+public class SpringbootKataApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootKataApplication.class, args);
+    }
+
+}
+```
+
+* 端口配置
+
+```yml
+# application.yml
+server:
+  port: 8080
+```
 
 ### 全局异常处理（结合错误码） 
 
+* 定义 `GlobalExceptionHandler`，从[国际化](#国际化消息)文件中加载对应错误说明
+
+```java
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    private static String MSG_ERROR_CODE = "error.code.";
+
+    private final MessageSource messageSource;
+
+    @Autowired
+    public GlobalExceptionHandler(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public BaseResponse handleException(Exception e) {
+        log.error("处理未知异常", e);
+        BaseResponse response = new BaseResponse();
+        String message = messageSource.getMessage(
+                "exception.handler.msg.unknown", null, LocaleContextHolder.getLocale());
+        response.fail(message, SysErrorCode.INNER_ERROR);
+        return response;
+    }
+}
+```
+
 ### 自定义类型转换
 
+* 自定义组件实现接口： `org.springframework.core.convert.converter.Converter`
+
+```java
+@Component
+public class DateConverter implements Converter<String, Date> {
+
+    @Override
+    public Date convert(String stringDate) {
+        //todo 根据不同时间格式进行转换
+        return null;
+    }
+}
+```
+
+* 配置 `WebMvcConfigurer`
+
+```java
+// todo 待整理
+```
+
 ### 拦截器
+
+
 
 ### 过滤器
 
@@ -30,7 +100,16 @@
 
 ### 多环境
 
+
+
 ### 日志
+
+#### 日志文件
+
+
+
+#### 动态日志监听
+
 
 
 
@@ -46,15 +125,27 @@
 
 ### 数据源
 
+
+
+
 ### 连接池 - Druid
 
+
+
+
 ### 数据版本迁移 - flyway
+
+
 
 ### ORM - Mybatis
 
 
 
 ## 缓存
+
+### Spring Cache
+
+
 
 ## 任务
 
@@ -66,13 +157,13 @@
 
 ## 测试
 
-### 单元测试
+### 单元测试 - JUnit5
 
-> 使用Junit5
+
 
 参考 `demo` 文件夹下测试类 
 
-### 集成测试
+### 集成测试 - SpringBoot Test
 
 
 
@@ -135,7 +226,7 @@ public class ApiDocConfiguration {
 
 ### Actuator
 
-
+ 
 
 
 

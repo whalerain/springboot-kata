@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * @author ZhangXi
  */
 public enum Sex {
+
     /**
      * 男性
      */
@@ -61,9 +62,6 @@ public enum Sex {
         return desc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
 
     /**
      * API文档中显示@JsonValue标注的属性
