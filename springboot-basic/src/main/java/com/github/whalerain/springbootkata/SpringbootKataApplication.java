@@ -13,6 +13,10 @@ public class SpringbootKataApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootKataApplication.class, args);
+
+        // 优雅停机
+        Runtime.getRuntime().addShutdownHook(new MyShutdownRunner());
+
     }
 
 }

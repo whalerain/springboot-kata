@@ -1,5 +1,6 @@
-package com.github.whalerain.springbootkata.validator;
+package com.github.whalerain.springbootkata.validation.validator;
 
+import com.github.whalerain.springbootkata.validation.InEnum;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.validation.ConstraintValidator;

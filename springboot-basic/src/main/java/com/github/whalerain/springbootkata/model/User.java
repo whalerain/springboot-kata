@@ -3,7 +3,7 @@ package com.github.whalerain.springbootkata.model;
 import com.github.whalerain.springbootkata.menum.Sex;
 import com.github.whalerain.springbootkata.menum.UserStatus;
 import com.github.whalerain.springbootkata.support.base.BaseModel;
-import com.github.whalerain.springbootkata.validator.InEnum;
+import com.github.whalerain.springbootkata.validation.InEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

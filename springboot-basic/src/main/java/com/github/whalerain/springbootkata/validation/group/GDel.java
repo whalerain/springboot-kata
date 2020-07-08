@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.validator;
+package com.github.whalerain.springbootkata.validation.group;
 
 /**
  * 参数校验分组：删除数据情形

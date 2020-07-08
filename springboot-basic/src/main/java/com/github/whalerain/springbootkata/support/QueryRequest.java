@@ -15,13 +15,13 @@ import javax.validation.Valid;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class QueryRequest extends BaseRequest {
+public class QueryRequest<K extends QueryParams> extends BaseRequest {
 
     /**
      * 查询参数
      */
     @Schema(description = "查询参数")
-    private QueryParams queryParams;
+    private K queryParams;
 
     /**
      * 分页参数

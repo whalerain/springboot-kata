@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.validator;
+package com.github.whalerain.springbootkata.validation;
 
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.menum.Sex;

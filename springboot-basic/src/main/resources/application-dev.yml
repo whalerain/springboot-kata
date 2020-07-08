@@ -8,6 +8,9 @@ spring:
     driver-class-name: org.h2.Driver
     username: dev
     password: dev123
+    # 数据源初始化
+    schema: classpath:db/h2/schema.sql
+    data: classpath:db/h2/data.sql
   # h2 配置
   h2:
     console:

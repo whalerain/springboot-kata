@@ -1,4 +1,6 @@
-package com.github.whalerain.springbootkata.validator;
+package com.github.whalerain.springbootkata.validation;
+
+import com.github.whalerain.springbootkata.validation.validator.InEnumValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -8,16 +10,17 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 自定义参数校验：手机号
- *
+ * 校验枚举值
  * @author ZhangXi
  */
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = MobileValidator.class)
-public @interface Mobile {
+@Constraint(validatedBy = InEnumValidator.class)
+public @interface InEnum {
 
-    String message() default "{app.validator.constraints.mobile.message}";
+    Class<? extends Enum> enumClass();
+
+    String message() default "{app.validation.constraints.InEnum.message}";
 
     Class<?>[] groups() default {};
 

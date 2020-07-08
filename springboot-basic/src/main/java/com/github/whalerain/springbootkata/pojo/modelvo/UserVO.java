@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.menum.Sex;
 import com.github.whalerain.springbootkata.menum.UserStatus;
-import com.github.whalerain.springbootkata.validator.GUpd;
+import com.github.whalerain.springbootkata.validation.group.GUpd;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.validator.constraints.Range;
 
