@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.request;
 
 import com.github.whalerain.springbootkata.exception.InvalidParamException;
 import com.github.whalerain.springbootkata.support.base.BaseRequest;

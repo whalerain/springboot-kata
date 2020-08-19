@@ -1,4 +1,4 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.base;
 
 import com.github.whalerain.springbootkata.support.base.Available;
 
@@ -8,4 +8,4 @@ import com.github.whalerain.springbootkata.support.base.Available;
  *
  * @author ZhangXi
  */
-public interface ErrorCode extends Available<Integer> {}
+public interface ErrorCoder extends Available<Integer> {}

@@ -10,9 +10,8 @@ import com.github.whalerain.springbootkata.menum.UserStatus;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
 import com.github.whalerain.springbootkata.service.UserService;
 import com.github.whalerain.springbootkata.support.PagedData;
-import com.github.whalerain.springbootkata.support.sub.OrderParams;
-import com.github.whalerain.springbootkata.support.sub.PagedParams;
-import com.github.whalerain.springbootkata.support.sub.QueryParams;
+import com.github.whalerain.springbootkata.support.param.PagedParams;
+import com.github.whalerain.springbootkata.support.param.QueryParams;
 import com.github.whalerain.springbootkata.tool.PojoTools;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -47,7 +46,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public PagedData<UserVO> queryPagedUsers(PagedParams pagedParams, QueryParams queryParams, OrderParams orderParams) {
+    public PagedData<UserVO> queryPagedUsers(PagedParams pagedParams, QueryParams queryParams) {
         IPage<User> page = new Page<>(pagedParams.getPageNum(), pagedParams.getPageSize());
         page = userDao.selectPage(page, null);
         return null;

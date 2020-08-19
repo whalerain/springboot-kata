@@ -1,16 +1,19 @@
-package com.github.whalerain.springbootkata.support;
+package com.github.whalerain.springbootkata.support.request;
 
 import com.github.whalerain.springbootkata.support.base.BaseRequest;
-import com.github.whalerain.springbootkata.support.sub.OrderParams;
-import com.github.whalerain.springbootkata.support.sub.PagedParams;
-import com.github.whalerain.springbootkata.support.sub.QueryParams;
+import com.github.whalerain.springbootkata.support.param.OrderParam;
+import com.github.whalerain.springbootkata.support.param.PagedParams;
+import com.github.whalerain.springbootkata.support.param.QueryParams;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
+ * API查询请求数据VO
+ *
  * @author ZhangXi
  */
 @EqualsAndHashCode(callSuper = true)
@@ -34,6 +37,6 @@ public class QueryRequest<K extends QueryParams> extends BaseRequest {
      * 排序参数
      */
     @Schema(description = "排序参数")
-    private OrderParams orderParams;
+    private List<OrderParam> orderParams;
 
 }

@@ -3,9 +3,8 @@ package com.github.whalerain.springbootkata.service;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
 import com.github.whalerain.springbootkata.support.PagedData;
-import com.github.whalerain.springbootkata.support.sub.OrderParams;
-import com.github.whalerain.springbootkata.support.sub.PagedParams;
-import com.github.whalerain.springbootkata.support.sub.QueryParams;
+import com.github.whalerain.springbootkata.support.param.PagedParams;
+import com.github.whalerain.springbootkata.support.param.QueryParams;
 
 /**
  * 用户Service层接口
@@ -25,10 +24,9 @@ public interface UserService {
      * 用户分页查询
      * @param pagedParams {@link PagedParams}
      * @param queryParams {@link QueryParams}
-     * @param orderParams {@link OrderParams}
      * @return {@link PagedData<UserVO>}
      */
-    PagedData<UserVO> queryPagedUsers(PagedParams pagedParams, QueryParams queryParams, OrderParams orderParams);
+    PagedData<UserVO> queryPagedUsers(PagedParams pagedParams, QueryParams queryParams);
 
     /**
      * 新增用户

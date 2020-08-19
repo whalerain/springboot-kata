@@ -1,7 +1,5 @@
 package com.github.whalerain.springbootkata.support.base;
 
-import com.github.whalerain.springbootkata.constant.ResponseStatus;
-import com.github.whalerain.springbootkata.support.ErrorCode;
 import lombok.Data;
 
 /**
@@ -14,7 +12,7 @@ public class BaseResponse<T> {
 
     private static final String DEFAULT_MESSAGE = "";
 
-    private ResponseStatus status;
+    private ApiStatus status;
 
     private Integer errorCode;
 
@@ -24,7 +22,7 @@ public class BaseResponse<T> {
 
 
     public void success() {
-        this.status = ResponseStatus.SUCCESS;
+        this.status = ApiStatus.SUCCESS;
     }
 
     public void success(String message) {
@@ -38,7 +36,7 @@ public class BaseResponse<T> {
     }
 
     public void fail() {
-        this.status = ResponseStatus.FAILURE;
+        this.status = ApiStatus.FAILURE;
     }
 
     public void fail(String message) {
@@ -46,10 +44,10 @@ public class BaseResponse<T> {
         this.message = message;
     }
 
-    public void fail(String message, ErrorCode errorCode) {
+    public void fail(String message, ErrorCoder errorCoder) {
         fail(message);
-        if(null != errorCode) {
-            this.errorCode = errorCode.take();
+        if(null != errorCoder) {
+            this.errorCode = errorCoder.take();
         }
     }
 

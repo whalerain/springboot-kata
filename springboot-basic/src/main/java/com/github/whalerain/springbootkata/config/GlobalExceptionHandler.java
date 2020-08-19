@@ -1,6 +1,6 @@
 package com.github.whalerain.springbootkata.config;
 
-import com.github.whalerain.springbootkata.constant.SysErrorCode;
+import com.github.whalerain.springbootkata.constant.SysErrorCoder;
 import com.github.whalerain.springbootkata.support.base.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class GlobalExceptionHandler {
         BaseResponse response = new BaseResponse();
         String message = messageSource.getMessage(
                 "exception.handler.msg.unknown", null, LocaleContextHolder.getLocale());
-        response.fail(message, SysErrorCode.INNER_ERROR);
+        response.fail(message, SysErrorCoder.INNER_ERROR);
         return response;
     }
 
@@ -62,7 +62,7 @@ public class GlobalExceptionHandler {
         BaseResponse response = new BaseResponse();
         String message = messageSource.getMessage(
                 "exception.handler.msg.param.invalid", infos, LocaleContextHolder.getLocale());
-        response.fail(message, SysErrorCode.PARAM_INVALID);
+        response.fail(message, SysErrorCoder.PARAM_INVALID);
         return response;
     }
 

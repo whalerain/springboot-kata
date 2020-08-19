@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.github.whalerain.springbootkata.exception.InvalidParamException;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.pojo.modelvo.UserVO;
-import com.github.whalerain.springbootkata.support.AbstractModelRequest;
+import com.github.whalerain.springbootkata.support.request.AbstractModelRequest;
 import com.github.whalerain.springbootkata.support.base.BaseResponse;
 import com.github.whalerain.springbootkata.tool.JsonTools;
 import io.swagger.v3.oas.annotations.Hidden;

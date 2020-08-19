@@ -1,11 +1,11 @@
 package com.github.whalerain.springbootkata.constant;
 
-import com.github.whalerain.springbootkata.support.ErrorCode;
+import com.github.whalerain.springbootkata.support.base.ErrorCoder;
 
 /**
  * @author ZhangXi
  */
-public enum UserErrorCode implements ErrorCode {
+public enum UserErrorCoder implements ErrorCoder {
     ;
 
     @Override

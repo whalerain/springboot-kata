@@ -1,13 +1,13 @@
 package com.github.whalerain.springbootkata.exception;
 
-import com.github.whalerain.springbootkata.support.ErrorCode;
+import com.github.whalerain.springbootkata.support.base.ErrorCoder;
 
 /**
  * @author ZhangXi
  */
 public class InvalidParamException extends Exception {
 
-    private ErrorCode errorCode;
+    private ErrorCoder errorCoder;
 
     public InvalidParamException(String message) {
         super(message);
@@ -17,8 +17,8 @@ public class InvalidParamException extends Exception {
         super(message, cause);
     }
 
-    public InvalidParamException with(ErrorCode errorCode) {
-        this.errorCode = errorCode;
+    public InvalidParamException with(ErrorCoder errorCoder) {
+        this.errorCoder = errorCoder;
         return this;
     }
 
