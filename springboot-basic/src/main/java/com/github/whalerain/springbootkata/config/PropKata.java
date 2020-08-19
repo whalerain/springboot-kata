@@ -17,6 +17,10 @@ public class PropKata {
 
     private Regexp regexp;
 
+    private String resourcePrefixImage;
+
+
+
     @SuppressWarnings("WeakerAccess")
     @Data
     public static class Regexp {

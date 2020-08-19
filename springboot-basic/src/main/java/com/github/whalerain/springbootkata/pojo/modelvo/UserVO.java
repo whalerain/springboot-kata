@@ -2,9 +2,11 @@ package com.github.whalerain.springbootkata.pojo.modelvo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.github.whalerain.springbootkata.model.User;
 import com.github.whalerain.springbootkata.menum.Sex;
 import com.github.whalerain.springbootkata.menum.UserStatus;
+import com.github.whalerain.springbootkata.support.resource.ImageUrlSerializer;
 import com.github.whalerain.springbootkata.validation.group.GUpd;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.validator.constraints.Range;
@@ -92,6 +94,17 @@ public class UserVO extends User implements Serializable {
     public UserStatus getStatus() {
         return super.getStatus();
     }
+
+    /**
+     * 自定义序列化，自动拼接图片url的前缀地址
+     * @return
+     */
+    @JsonSerialize(using = ImageUrlSerializer.class)
+    public String getAvatarUrl() {
+        return "/data";
+    }
+
+
 
     @JsonIgnore
     @Override
