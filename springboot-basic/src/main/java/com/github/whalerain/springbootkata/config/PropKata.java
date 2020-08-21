@@ -1,6 +1,7 @@
 package com.github.whalerain.springbootkata.config;
 
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -12,20 +13,15 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ConfigurationProperties(prefix = "kata")
 public class PropKata {
 
-    private Regexp regexp;
+    @Value("${kata.regexp.mobile}")
+    private String regexpMobile;
 
-    private String resourcePrefixImage;
+    @Value("${kata.regexp.telephone}")
+    private String regexpTelephone;
 
-
-
-    @SuppressWarnings("WeakerAccess")
-    @Data
-    public static class Regexp {
-        private String mobile;
-        private String telephone;
-    }
+    @Value("${kata.res.url.prefix}")
+    private String resourceUrlPrefix;
 
 }

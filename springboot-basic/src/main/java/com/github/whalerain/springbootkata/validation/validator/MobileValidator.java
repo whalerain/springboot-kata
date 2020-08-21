@@ -20,7 +20,7 @@ public class MobileValidator implements ConstraintValidator<Mobile, String> {
     @Override
     public boolean isValid(String mobile, ConstraintValidatorContext constraintValidatorContext) {
         PropKata kata = (PropKata) ApplicationContextProvider.getBean("propKata");
-        String mobileRegexp = kata.getRegexp().getMobile();
+        String mobileRegexp = kata.getRegexpMobile();
         return Pattern.matches(mobileRegexp, mobile);
     }
 }

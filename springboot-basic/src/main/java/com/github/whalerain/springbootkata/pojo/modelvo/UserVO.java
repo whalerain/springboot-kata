@@ -105,7 +105,6 @@ public class UserVO extends User implements Serializable {
     }
 
 
-
     @JsonIgnore
     @Override
     public Boolean getIsDeleted() {

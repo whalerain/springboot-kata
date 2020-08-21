@@ -18,7 +18,7 @@ public class ImageUrlSerializer extends JsonSerializer<String> {
     @Override
     public void serialize(String value, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         if (null != value && !"".equals(value)) {
-            jsonGenerator.writeString(ResourcePrefix.URI_IMAGE+value);
+            jsonGenerator.writeString(ResourceConst.URL_PREFIX +value);
         }
     }
 }
